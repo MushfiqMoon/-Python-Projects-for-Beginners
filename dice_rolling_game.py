@@ -41,11 +41,11 @@ def roll_dice():
 def main():
 
     # Ask the player: do you want to roll or walk away?
-    choice = input("Roll the Dice? (y/n): ")
+    choice = input("🎲 Roll the Dice? (y/n): ")
 
     if choice == "y":
         # Great — they want to roll! Now ask how many times.
-        times = int(input("How many times to roll the dice? (1-10): "))
+        times = int(input("🔢 How many times to roll the dice? (1-10): "))
 
         # We need to reach out and update the global counter.
         # Without the "global" keyword Python would create a
@@ -56,7 +56,7 @@ def main():
         # If the player types 0, -3, or 99 we politely refuse
         # and send them back to the beginning of main().
         if times < 1 or times > 10:
-            print("Please enter a number between 1 and 10.")
+            print("⚠️  Please enter a number between 1 and 10.")
             return main()
 
         # Add this round's rolls to the running total.
@@ -74,13 +74,13 @@ def main():
 
     elif choice == "n":
         # The player is done. Say goodbye and show the score.
-        print("Thanks for playing!")
-        print(f"You rolled the dice {total_rolls} time(s) this session.")
+        print("👋 Thanks for playing!")
+        print(f"🏆 You rolled the dice {total_rolls} time(s) this session.")
 
     else:
         # They typed something unexpected (not "y" or "n").
         # Let's gently nudge them back to try again.
-        print('Please type "y" to roll or "n" to quit.')
+        print('⚠️  Please type "y" to roll or "n" to quit.')
         main()
 
 
