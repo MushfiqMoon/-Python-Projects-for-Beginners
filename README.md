@@ -132,3 +132,12 @@ You guessed the number! Well done!
 - Quit check compared the `input` function object to `'q'` (always `False`) — fixed to check the actual user input
 - Repeated `int(input(...))` calls scattered across the loop — consolidated into a single `get_guess()` helper
 - Multi-line string literal caused a `SyntaxError` — rewritten using implicit string concatenation
+
+---
+
+## Credits
+
+A huge thank you to **Mosh Hamedani** for the inspiration behind these projects.
+If you're learning Python and haven't watched his tutorials yet, highly recommend checking them out:
+
+▶️ [Python for Beginners — Mosh](https://www.youtube.com/watch?v=yVl_G-F7m8c)
